@@ -14,3 +14,10 @@ Files (to be added):
 Tool Used:
 - LTspice
 
+### Components Used
+- Pulse voltage source (clock): PULSE(0 5 0 10n 10n 0.5u 1u)
+- DC voltage source: 1 V
+- Diodes: 1N5818 (2×)
+- Capacitors: 1 µF (2×)
+- Transient analysis: .tran 4m
+
