@@ -15,3 +15,10 @@ Files (to be added):
 
 Tool Used:
 - LTspice
+
+### Components Used
+- Operational amplifier: OP07
+- Resistors: 25 kΩ, 100 Ω
+- Input source: SINE(0 5 1k)
+- DC supplies: +12 V (2×), 3 V reference
+- Transient analysis: .tran 70m
