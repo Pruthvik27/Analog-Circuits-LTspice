@@ -25,39 +25,41 @@ Tool Used:
 
 ---
 
+---
+
 ## Working Principle
 
-The Wien Bridge Oscillator generates a sinusoidal output using a frequency-selective RC bridge network combined with an operational amplifier.
+The Schmitt Trigger is a comparator circuit with **positive feedback**, which introduces hysteresis into the switching behavior.
 
-The RC network provides **positive feedback** at a specific frequency, while the resistor network around the op-amp provides **negative feedback** to control the gain.
+When the input voltage rises above the **upper threshold voltage**, the output switches to the high saturation level.  
+When the input voltage falls below the **lower threshold voltage**, the output switches to the low saturation level.
 
-At the oscillation frequency:
-- Phase shift through the RC network is 0°
-- Loop gain becomes unity
-- Sustained oscillations are produced
-
-The op-amp supplies the required gain, and the RC bridge determines the frequency of oscillation.
+Because two different threshold voltages exist, small noise or slow variations at the input do not cause false switching.  
+This makes the Schmitt Trigger useful for signal conditioning and noise immunity.
 
 ---
 
 ## Design Equations
 
-### Oscillation Frequency
-For equal resistor and capacitor values:
+Let:
+- R1 = feedback resistor
+- R3 = reference resistor
+- Vref = reference voltage
+- Vout = output saturation voltage
 
-f₀ = 1 / (2πRC)
+### Upper Threshold Voltage (VUT)
+VUT = Vref + (R3 / R1) × Vout
 
-Where:
-- R = Resistance in the Wien bridge network
-- C = Capacitance in the Wien bridge network
+### Lower Threshold Voltage (VLT)
+VLT = Vref − (R3 / R1) × Vout
 
 ---
 
-### Gain Condition for Oscillation
+### Hysteresis Width
+Hysteresis = VUT − VLT
 
-To sustain oscillations:
+The amount of hysteresis depends on the resistor ratio and the output voltage levels.
 
-Av ≥ 3
 
 Where:
 - Av is the closed-loop gain of the op-amp
