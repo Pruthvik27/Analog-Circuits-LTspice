@@ -14,3 +14,10 @@ Files (to be added):
 
 Tool Used:
 - LTspice
+
+### Components Used
+- Operational amplifier: OP07
+- Resistors: 4.9 kΩ, 10 kΩ, 7.5 kΩ (2×)
+- Capacitors: 10 nF (2×)
+- Dual power supply: +5 V, −5 V
+- Transient analysis: .tran 0.01
